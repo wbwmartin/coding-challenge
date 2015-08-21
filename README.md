@@ -9,13 +9,11 @@ This problem should take you between 30 and 90 minutes.
 We recommend that you use a high-level language, like Python, Ruby, JavaScript, or Java. We're much more interested in seeing clean code and good algorithmic performance than raw throughput.
 
 #####Data Commands
-Your database should accept the following commands:
-**SET name** value – Set the variable name to the value value. Neither variable names nor values will contain spaces.
-
-**GET name** – Print out the value of the variable name, or NULL if that variable is not set.
-
-**UNSET name** – Unset the variable name, making it just like that variable was never set.
-**NUMEQUALTO value** – Print out the number of variables that are currently set to value. If no variables equal that value, print 0.
+Your database should accept the following commands:<br>
+**SET name** value – Set the variable name to the value value. Neither variable names nor values will contain spaces.<br>
+**GET name** – Print out the value of the variable name, or NULL if that variable is not set.<br>
+**UNSET name** – Unset the variable name, making it just like that variable was never set.<br>
+**NUMEQUALTO value** – Print out the number of variables that are currently set to value. If no variables equal that value, print 0.<br>
 **END** – Exit the program. Your program will always receive this as its last command.
 Commands will be fed to your program one at a time, with each command on its own line. Any output that your program generates should end with a newline character. Here are some example command sequences:
 
@@ -40,10 +38,10 @@ END
 ```
 
 #####Transaction Commands
-In addition to the above data commands, your program should also support database transactions by also implementing these commands:
-**BEGIN** – Open a new transaction block. Transaction blocks can be nested; a BEGIN can be issued inside of an existing block.
-**ROLLBACK** – Undo all of the commands issues in the most recent transaction block, and close the block. Print nothing if successful, or print NO TRANSACTION if no transaction is in progress.
-**COMMIT** – Close all open transaction blocks, permanently applying the changes made in them. Print nothing if successful, or print NO TRANSACTION if no transaction is in progress.
+In addition to the above data commands, your program should also support database transactions by also implementing these commands:<br>
+**BEGIN** – Open a new transaction block. Transaction blocks can be nested; a BEGIN can be issued inside of an existing block.<br>
+**ROLLBACK** – Undo all of the commands issues in the most recent transaction block, and close the block. Print nothing if successful, or print NO TRANSACTION if no transaction is in progress.<br>
+**COMMIT** – Close all open transaction blocks, permanently applying the changes made in them. Print nothing if successful, or print NO TRANSACTION if no transaction is in progress.<br>
 Any data command that is run outside of a transaction block should commit immediately. Here are some example command sequences:
 
 ```
